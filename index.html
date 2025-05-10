@@ -1,0 +1,249 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+<title>Modern Portfolio</title>
+<style>
+  @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;600&display=swap');
+
+  * {
+    box-sizing: border-box;
+  }
+  body {
+    margin: 0;
+    font-family: 'Poppins', sans-serif;
+    background: #121212;
+    color: #f0f0f0;
+    line-height: 1.6;
+  }
+
+  header {
+    background-color: #1f1f1f;
+    padding: 1rem 2rem;
+    text-align: center;
+    border-bottom: 2px solid #3e92cc;
+  }
+
+  header h1 {
+    margin: 0;
+    font-weight: 600;
+    font-size: 2rem;
+    color: #3e92cc;
+    letter-spacing: 2px;
+  }
+
+  nav {
+    margin-top: 0.5rem;
+  }
+
+  nav a {
+    color: #a9a9a9;
+    margin: 0 15px;
+    text-decoration: none;
+    font-weight: 500;
+    transition: color 0.3s;
+  }
+  nav a:hover,
+  nav a:focus {
+    color: #3e92cc;
+  }
+
+  .container {
+    max-width: 960px;
+    margin: 2rem auto;
+    padding: 0 15px;
+  }
+
+  .intro {
+    text-align: center;
+    margin-bottom: 3rem;
+  }
+  .intro h2 {
+    font-weight: 600;
+    font-size: 2.2rem;
+    margin-bottom: 0.5rem;
+  }
+  .intro p {
+    font-weight: 300;
+    font-size: 1.1rem;
+    color: #d0d0d0;
+  }
+
+  section {
+    margin-bottom: 3rem;
+  }
+
+  h3 {
+    font-size: 1.6rem;
+    font-weight: 600;
+    border-bottom: 2px solid #3e92cc;
+    display: inline-block;
+    padding-bottom: 0.25rem;
+    margin-bottom: 1.5rem;
+  }
+
+  .projects {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+    gap: 20px;
+  }
+
+  .project-card {
+    background: #1f1f1f;
+    border-radius: 12px;
+    box-shadow: 0 0 15px rgba(62,146,204,0.2);
+    overflow: hidden;
+    transition: transform 0.3s ease;
+  }
+  .project-card:hover {
+    transform: translateY(-6px);
+  }
+
+  .project-image {
+    width: 100%;
+    height: 150px;
+    object-fit: cover;
+    display: block;
+  }
+  .project-content {
+    padding: 15px;
+  }
+  .project-title {
+    margin: 0 0 10px;
+    font-weight: 600;
+    font-size: 1.2rem;
+    color: #3e92cc;
+  }
+  .project-description {
+    font-weight: 300;
+    font-size: 0.95rem;
+    color: #d0d0d0;
+  }
+  .project-link {
+    margin-top: 10px;
+    display: inline-block;
+    color: #3e92cc;
+    text-decoration: none;
+    font-weight: 600;
+    font-size: 0.95rem;
+    border-bottom: 1px solid transparent;
+    transition: border-color 0.3s;
+  }
+  .project-link:hover,
+  .project-link:focus {
+    border-color: #3e92cc;
+  }
+
+  .about-me {
+    max-width: 600px;
+    margin: 0 auto;
+    font-weight: 300;
+    font-size: 1.1rem;
+    color: #cfcfcf;
+    text-align: center;
+  }
+
+  footer {
+    background-color: #1f1f1f;
+    text-align: center;
+    padding: 1rem;
+    font-size: 0.9rem;
+    color: #777;
+  }
+
+  /* Responsive for mobile with max height 600px and width 350px */
+  @media (max-width: 375px), (max-height: 600px) {
+    body {
+      font-size: 14px;
+    }
+    header h1 {
+      font-size: 1.5rem;
+    }
+    .intro h2 {
+      font-size: 1.5rem;
+    }
+    nav a {
+      margin: 0 10px;
+      font-size: 0.9rem;
+    }
+    .project-card {
+      height: auto;
+    }
+    .project-image {
+      height: 120px;
+    }
+  }
+</style>
+</head>
+<body>
+<header>
+  <h1>Your Name</h1>
+  <nav>
+    <a href="#projects" tabindex="1">Projects</a>
+    <a href="#about" tabindex="2">About Me</a>
+    <a href="#contact" tabindex="3">Contact</a>
+  </nav>
+</header>
+
+<div class="container">
+  <section class="intro">
+    <h2>Welcome to my portfolio</h2>
+    <p>Front-end Developer | UI/UX Enthusiast | Creative Coder</p>
+  </section>
+
+  <section id="projects">
+    <h3>Projects</h3>
+    <div class="projects">
+      <article class="project-card" tabindex="4" aria-label="Project One: Modern Website Design">
+        <img class="project-image" src="https://images.unsplash.com/photo-1503416997304-0e59e7569378?auto=format&fit=crop&w=400&q=80" alt="Screenshot of modern website design project" />
+        <div class="project-content">
+          <h4 class="project-title">Modern Website Design</h4>
+          <p class="project-description">A sleek website redesign project focusing on user experience and minimalistic style.</p>
+          <a href="#" class="project-link" tabindex="5">View Project</a>
+        </div>
+      </article>
+
+      <article class="project-card" tabindex="6" aria-label="Project Two: Mobile App UI">
+        <img class="project-image" src="https://images.unsplash.com/photo-1519389950473-47ba0277781c?auto=format&fit=crop&w=400&q=80" alt="Screenshot of mobile app UI project" />
+        <div class="project-content">
+          <h4 class="project-title">Mobile App UI</h4>
+          <p class="project-description">A clean and intuitive mobile app interface built with React Native and styled components.</p>
+          <a href="#" class="project-link" tabindex="7">View Project</a>
+        </div>
+      </article>
+
+      <article class="project-card" tabindex="8" aria-label="Project Three: E-commerce Platform">
+        <img class="project-image" src="https://images.unsplash.com/photo-1498050108023-c5249f4df085?auto=format&fit=crop&w=400&q=80" alt="Screenshot of e-commerce platform project" />
+        <div class="project-content">
+          <h4 class="project-title">E-commerce Platform</h4>
+          <p class="project-description">A responsive and dynamic e-commerce website with smooth animations and product filtering.</p>
+          <a href="#" class="project-link" tabindex="9">View Project</a>
+        </div>
+      </article>
+    </div>
+  </section>
+
+  <section id="about">
+    <h3>About Me</h3>
+    <p class="about-me">Hello! I'm a passionate web developer focused on creating modern, accessible, and beautiful digital experiences. With a strong background in front-end technologies, I love designing sleek websites and apps that users love to interact with.</p>
+  </section>
+
+  <section id="contact" style="text-align:center;">
+    <h3>Contact</h3>
+    <p>Feel free to get in touch via email or social media!</p>
+    <p><a href="mailto:youremail@example.com" style="color:#3e92cc; text-decoration:none;">youremail@example.com</a></p>
+    <p>
+      <a href="https://linkedin.com/in/yourprofile" target="_blank" rel="noopener" style="color:#3e92cc; margin-right:15px;">LinkedIn</a>
+      <a href="https://github.com/yourprofile" target="_blank" rel="noopener" style="color:#3e92cc;">GitHub</a>
+    </p>
+  </section>
+</div>
+
+<footer>
+  &copy; 2024 Your Name. All rights reserved.
+</footer>
+</body>
+</html>
+
+```
